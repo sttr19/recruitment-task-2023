@@ -1,71 +1,46 @@
-# recruitment-task-2023
-## Goal
+# Getting Started with Create React App
 
-Prepare react application that will render **any** interactive card layout based on provided json definition that consists of known elements types(described below). By default, the element takes all available space. This space can be managed with dedicated elements(splitters). Every element has its own unique `elementKey`.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-You can start with [StackBlitz ⚡️ template](https://stackblitz.com/edit/template-dt-ts)
+## Available Scripts
 
-### Resources: 
-- All elements types can be found in `model.ts` file.
-- in `example.json` there is a definition of example card that uses all features that needs to be implemented. 
+In the project directory, you can run:
 
+### `npm start`
 
-## Elements
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-You have 5 elements type to implement:
-* `TextTile` - Displays the text.
-    - title - describes tile header
-    - text - main text of the tile - text volume should not affect tile size
-    - color - background color theme of the tile - you can assign any colors to theme here
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-![TextTile](resources/textTile.png "Text Tile")
+### `npm test`
 
-- `ImageTile` - Displays an image.
-    - source - URL pointing to image
-    - title - alternative text/title
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-![ImageTile](resources/imageTile.png "Image Tile")
+### `npm run build`
 
-- `ButtonTile` - Hosts a button that performs an action on click.
-    - text - button label
-    - action - Executable action. Payload(value) depends on the action type.
-    
-    Action - when button is clicked, assigned action is triggered. In this example there is only one type of action to implement - `update`. When triggered, update action changes values that are specified in `value` object, in element that is referenced by `elementKey` in `referenceElementKey` field. e.g.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-    ```
-    "action": {
-        "type": "update",
-        "referenceElementKey": "09e76596-d48b-11ed-afa1-0242ac120002",
-        "value": {
-            "color": "light"
-        }
-    }
-    ```
-    will change `color` on tile with `elementKey` of `09e76596-d48b-11ed-afa1-0242ac120002`
-    
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-![ButtonTile](resources/button.png "Button Tile")
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-- `HorizontalSplitter` - Splits available space horizontally `evenly` across all child elements.
-    -  elements - list of children elements that will be displayed one after(below) another in order of occurrence
-    
-![HorizontalSplitter](resources/horizontalSplit.png "Horizontal Splitter")
+### `npm run eject`
 
-- `VerticalSplitter` - Splits available space vertically `evenly` across all child elements.
-    -  elements - list of children elements that will be displayed next to each other in order of occurrence
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-![VerticalSplitter](resources/verticalSplit.png "Vertical Splitter")
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-## Requirements:  
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-- Fork this template and share your solution on github
-- insert comments describing what you do if not obvious
-- use Type Script (model can be found in `model.ts` file)
-- use functional React components
-- Project does not need to be "pixel perfect". Proper tree rendering and cross elements dependencies should be your first priority.
-- assume that card definition(`Layout` object) is provided from `http://localhost:8080/definition` - you can use https://www.npmjs.com/package/json-server to serve example
-- assume any reasonable limits you would need
-- example card (definition in example.json) needs to be rendered and working properly
+## Learn More
 
-![Example](resources/fullCard.png "Full example")
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
