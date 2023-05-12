@@ -1,13 +1,25 @@
 import React, { useEffect, useState } from "react";
 import "./style.css";
 import axios from "axios";
-import { Layout } from "./model";
+import LayoutBlock from "./components/LayoutBlock";
 
 const SERVER_URL = "http://localhost:8080/definition";
 
-function App() {
-  const [appData, setData] = useState<Layout|null>(null);
+/*const ElementsService = {
+  get: async function () {
+    return axios.get(SERVER_URL);
+  },
+};*/
+
+export default function App() {
+  const [appData, setData] = useState(null);
   console.log(appData);
+
+  /*useEffect(() => {
+    ElementsService.get().then((response) => {
+      setData(response.data);
+    });
+  }, []);*/
 
   async function fetchData() {
     const response = await axios.get(SERVER_URL);
@@ -19,16 +31,23 @@ function App() {
     fetchData();
   }, []);
 
+  /*function getValue(rootObj: any) {
+    let arr = Object.entries(rootObj);
+    return arr;
+  }
+
+  console.log(getValue(appData));*/
+
   return (
     <div className="main">
-      {/* TODO remove title usage from template */}
-      <h1>{"Place you components here 👇"}</h1>
-      <div className="content">
-        <h3>{appData?.title}</h3>
-        <h4>jljkjnnk</h4>
-      </div>
+      <h1>Place you components here </h1>
+      {appData && <h3>{appData.title}</h3>}
+
+      {appData && 
+        <div className="content">
+          <LayoutBlock {...appData.rootElement} />
+        </div>
+  }
     </div>
   );
 }
-
-export default App;
