@@ -23,10 +23,10 @@ export function getType(element: ElementsType) {
     case "textTile":
       return <TextTileComponent key={element.elementKey} {...element} />;
 
-      case "imageTile":
+    case "imageTile":
       return <ImageTileComponent key={element.elementKey} {...element} />;
 
-      case "buttonTile":
+    case "buttonTile":
       return <ButtonTileComponent key={element.elementKey} {...element} />;
   }
 }

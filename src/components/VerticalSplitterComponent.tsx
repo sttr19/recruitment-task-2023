@@ -9,6 +9,7 @@ function VerticalSplitterComponent({ elementKey, elements }: VerticalSplitter) {
         {/* Returns appropriate element (defined by getType function) for each object in "elements" array in splitter object*/}
         {elements.map(element => getType(element))}
     </div>
+    
 )
 }
 
