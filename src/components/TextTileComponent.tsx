@@ -5,7 +5,7 @@ function TextTileComponent({ color, text, title, elementKey }: TextTile) {
   return (
     <div className="textTile__container">
       <div
-        className={`textTile__tile`}
+        className={`textTile__tile textTile__tile_${color}`}
         id={elementKey}
         key={elementKey}
       >

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./style.css";
 import axios from "axios";
 import LayoutBlock from "./components/LayoutBlock";
+import { Layout } from "./model";
 
 const SERVER_URL = "http://localhost:8080/definition";
 
@@ -12,7 +13,10 @@ const SERVER_URL = "http://localhost:8080/definition";
 };*/
 
 export default function App() {
-  const [appData, setData] = useState(null);
+  const [appData, setData] = useState<Layout>({
+    title: "",
+    rootElement: { type: "verticalSplitter", elements: [], elementKey: "" },
+  });
   console.log(appData);
 
   /*useEffect(() => {
@@ -41,13 +45,11 @@ export default function App() {
   return (
     <div className="main">
       <h1>Place you components here </h1>
-      {appData && <h3>{appData.title}</h3>}
+      <h3>{appData.title}</h3>
 
-      {appData && 
-        <div className="content">
-          <LayoutBlock {...appData.rootElement} />
-        </div>
-  }
+      <div className="content">
+        <LayoutBlock {...appData.rootElement} />
+      </div>
     </div>
   );
 }

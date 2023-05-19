@@ -63,3 +63,20 @@ body {
   
   height: calc(100%/4);
 }
+
+.textTile__tile{
+  width:100%;
+  height: 100%;
+}
+
+.textTile__tile_dark {
+  background-color: #f95cb0;
+}
+
+.textTile__tile_mid {
+  background-color: #9fa417;
+}
+
+.textTile__tile_light {
+  background-color: #cbe4ea;
+}
