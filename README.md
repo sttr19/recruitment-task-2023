@@ -1,4 +1,12 @@
 # recruitment-task-2023
+## How to run:
+- Clone the project (git clone https://github.com/sttr19/recruitment-task-2023.git)
+- Go to the project directory (cd recruitment-task-2023)
+- Install dependencies (npm i)
+- Start the server (npm run dev)
+
+
+
 ## Goal
 
 Prepare react application that will render **any** interactive card layout based on provided json definition that consists of known elements types(described below). By default, the element takes all available space. This space can be managed with dedicated elements(splitters). Every element has its own unique `elementKey`.
