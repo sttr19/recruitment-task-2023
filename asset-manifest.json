@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/recruitment-task-2023/static/css/main.5bbd3aab.css",
+    "main.js": "/recruitment-task-2023/static/js/main.d66c0345.js",
+    "index.html": "/recruitment-task-2023/index.html",
+    "main.5bbd3aab.css.map": "/recruitment-task-2023/static/css/main.5bbd3aab.css.map",
+    "main.d66c0345.js.map": "/recruitment-task-2023/static/js/main.d66c0345.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5bbd3aab.css",
+    "static/js/main.d66c0345.js"
+  ]
+}
