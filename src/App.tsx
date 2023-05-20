@@ -26,7 +26,7 @@ export default function App() {
   }, []);*/
 
   async function fetchData() {
-    const response = await axios.get(SERVER_URL);
+    const response =await axios.get(SERVER_URL);
     console.log(response);
     setData(response.data);
   }
